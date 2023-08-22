@@ -8,7 +8,7 @@ function TransactionItem({ transaction, onDeleteTransaction }) {
     fetch(`http://localhost:3000/transactions/${transaction.id}`, {
       method: "DELETE",
     })
-      .then((res) => res.json())
+      .then((Response) => Response.json())
       .then(() => onDeleteTransaction(transaction));
   }
 

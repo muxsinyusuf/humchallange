@@ -5,12 +5,12 @@ import AddTransactionForm from "./AddTransactionForm";
 
 function TransactionList() {
   const [transactions, setTransactions] = useState([]);
-  const [searchParam, setSearchParam] = useState("");
+  const [searchParameter, setSearchParameter] = useState("");
 
   //GET TRANSACTIONS FROM DB
   useEffect(() => {
     fetch(`http://localhost:3000/transactions`)
-      .then((res) => res.json())
+      .then((Response) => Response.json())
       .then((transactions) => setTransactions(transactions));
   }, []);
 
@@ -23,7 +23,7 @@ function TransactionList() {
   const transactionsList = transactions.filter((transaction) => {
     return transaction.description
       .toLowerCase()
-      .includes(searchParam.toLowerCase());
+      .includes(searchParameter.toLowerCase());
   });
 
   //DELETE FUNCTIONALITY
@@ -42,8 +42,8 @@ function TransactionList() {
   return (
     <div>
       <SearchTransactions
-        searchParam={searchParam}
-        onTransactionSearch={setSearchParam}
+        searchParameter={searchParameter}
+        onTransactionSearch={setSearchParameter}
       />
       <AddTransactionForm onAddTransaction={handleAddTransaction} />
 

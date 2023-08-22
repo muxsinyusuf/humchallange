@@ -1,15 +1,15 @@
 import React from "react";
 
-function SearchTransaction({ searchParam, onTransactionSearch }) {
-  function handleTransactionSearch(evt) {
-    onTransactionSearch(evt.target.value);
+function SearchTransaction({ searchParameter, onTransactionSearch }) {
+  function handleTransactionSearch(event) {
+    onTransactionSearch(event.target.value);
   }
   return (
     <div className="ui large fluid icon input">
       <input
         type="text"
         name="searchParam"
-        value={searchParam}
+        value={searchParameter}
         placeholder="Search your recent transactions"
         onChange={handleTransactionSearch}
       />
