@@ -30,7 +30,7 @@ function AddTransactionForm({ onAddTransaction }) {
       },
       body: JSON.stringify(transactionData),
     };
-    fetch(`http://localhost:3000/transactions`, fetchPOSTOptions)
+    fetch(`  http://localhost:8080/transactions`, fetchPOSTOptions)
       .then((res) => res.json())
       .then((newTransaction) => onAddTransaction(newTransaction));
 
@@ -79,7 +79,7 @@ function AddTransactionForm({ onAddTransaction }) {
             onChange={handleChange}
           />
         </div>
-        <button className="ui button" type="submit" style={{ color: "green" }}>
+        <button className="addtransaction" type="submit" >
           Add Transaction
         </button>
       </form>

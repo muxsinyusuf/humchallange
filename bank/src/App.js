@@ -4,8 +4,8 @@ import TransactionList from "./TransactionList";
 
 function App() {
   return (
-    <div className="ui raised segment">
-      <div className="ui segment violet inverted">
+    <div className="body">
+      <div className="header">
         <h1>The Royal Bank of Flatiron</h1>
       </div>
       <TransactionList />

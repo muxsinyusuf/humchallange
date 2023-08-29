@@ -5,7 +5,7 @@ function TransactionItem({ transaction, onDeleteTransaction }) {
 
   //DELETE transaction operation
   function handleTransactionDelete() {
-    fetch(`http://localhost:3000/transactions/${transaction.id}`, {
+    fetch(`  http://localhost:8080/transactions/${transaction.id}`, {
       method: "DELETE",
     })
       .then((Response) => Response.json())

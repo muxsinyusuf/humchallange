@@ -5,10 +5,10 @@ function SearchTransaction({ searchParameter, onTransactionSearch }) {
     onTransactionSearch(event.target.value);
   }
   return (
-    <div className="ui large fluid icon input">
+    <div className="search">
       <input
         type="text"
-        name="searchParam"
+        name="searchParameter"
         value={searchParameter}
         placeholder="Search your recent transactions"
         onChange={handleTransactionSearch}

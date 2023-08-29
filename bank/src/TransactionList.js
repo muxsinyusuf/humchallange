@@ -9,7 +9,7 @@ function TransactionList() {
 
   //GET TRANSACTIONS FROM DB
   useEffect(() => {
-    fetch(`http://localhost:3000/transactions`)
+    fetch(`  http://localhost:8080/transactions`)
       .then((Response) => Response.json())
       .then((transactions) => setTransactions(transactions));
   }, []);
@@ -47,8 +47,8 @@ function TransactionList() {
       />
       <AddTransactionForm onAddTransaction={handleAddTransaction} />
 
-      <table className="ui celled striped padded table">
-        <thead className="ui center aligned header">
+      <table className="t-list">
+        <thead className="t-header">
           <tr>
             <th>Date</th>
             <th>Description</th>
