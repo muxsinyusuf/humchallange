@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const FilterBar = ({ onFilter }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleFilter = () => {
     onFilter(searchTerm);
@@ -13,7 +13,7 @@ const FilterBar = ({ onFilter }) => {
         type="text"
         placeholder="Search by description"
         value={searchTerm}
-        onChange={e => setSearchTerm(e.target.value)}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button onClick={handleFilter}>Search</button>
     </div>
